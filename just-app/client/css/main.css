@@ -1,0 +1,44 @@
+nav{
+	height: 50px;
+	line-height: 3.3rem;
+
+background: #f857a6; /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #f857a6 , #ff5858); /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #f857a6 , #ff5858); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+a{
+	text-decoration: none;
+}
+
+nav a:hover{
+	text-decoration: none;
+	color: #FFF;
+}
+nav a:active{
+	text-decoration: none;
+	color: #FFF;
+}
+.brand-logo{
+	font-family: 'Italianno', cursive;
+
+}
+nav .container ul li a{
+	height: 50px;
+}
+nav .container ul li a i{
+	height: 50px;
+	line-height: 3.2rem;
+}
+nav ul li a{
+	font-family: 'Quicksand', sans-serif;
+	
+}
+ul li a i{
+	line-height: 3.3rem;
+
+}
+
+ul.tabs li a:hover, ul.tabs li a:active, ul.tabs li a{
+	text-decoration: none;
+}
