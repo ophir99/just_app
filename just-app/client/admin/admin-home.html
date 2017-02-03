@@ -6,16 +6,43 @@
     	<div class="container">
     		
     		<div class="nav-wrapper">
-      <a href="/adminHome" class="brand-logo">Chakrapani Sir</a>
-      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+      <a href="/adminHome" class="brand-logo" style="margin-top: 4px;">Admin</a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse" style="margin-top: -3px;"><i class="fa fa-bars" aria-hidden="true"></i></a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="#upload-video">
-        	<i class="small fa fa-youtube" aria-hidden="true"></i>
+        
+        <li class="tooltipped" data-tooltip="Upload Exam/Courses" data-position="down"><a href="#upload_course">
+          <i class="tiny fa fa-list" aria-hidden="true"></i>
 
         </a></li>
-        <li><a href="badges.html">Components</a></li>
-        <li><a href="collapsible.html">Javascript</a></li>
-        <li><a href="mobile.html">Mobile</a></li>
+        <li class="tooltipped" data-tooltip="Create Chapters/Modules" data-position="down"><a href="#upload-chapter">
+         <i class="tiny fa fa-book" aria-hidden="true"></i>
+        </a></li>
+        <li class="tooltipped" data-tooltip="Upload Video" data-position="down">
+        <a href="#upload-video">
+          <i class="small fa fa-youtube" aria-hidden="true"></i>
+
+        </a></li>
+        
+        <li class="tooltipped" data-tooltip="Messages" data-position="down">
+          <a href="#upload-video">
+          <i class="tiny fa fa-envelope-o" aria-hidden="true"></i>
+
+        </a>
+        </li>
+        <li class="tooltipped" data-tooltip="Notifications" data-position="down">
+          <a href="#upload-video">
+          <i class="tiny fa fa-bell" aria-hidden="true"></i>
+
+        </a>
+        </li>
+        <li class="tooltipped" data-tooltip="Logout" data-position="down">
+        <a href="#upload-chapter">
+          
+          <i class="tiny fa fa-sign-out" aria-hidden="true"></i>
+
+        </a>
+        </li>
+        
       </ul>
       <ul class="side-nav" id="mobile-demo">
         <li><a href="sass.html">Sass</a></li>
@@ -28,6 +55,87 @@
     	</div>
   	</nav>
           
+<div id="upload_course" class="modal">
+  
+  <div class="modal-content">
+    
+  <div class="row">
+    <form class="col s12">
+      <div class="row">
+        <div class="col s12" id="list_form">
+          <h5 class="flow-text">Select Exam/Category</h5>
+          <a class="btn-floating btn-small blue waves-effect waves-light tooltipped" data-tooltip="Create Exam/Courses" data-position="right" href="#createExam">
+            <i class="material-icons">add</i>
+          </a>
+          <ul>
+
+            {{#each courses}}
+              <li>
+               <input type="checkbox" id="{{course_name}}" /><label for="{{course_name}}">{{course_name}}</label>
+              </li>
+            {{/each}}
+
+           
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12" id="list_form">
+          <h5 class="flow-text">Select Chapter/Module</h5>
+          <a class="btn-floating btn-small blue waves-effect waves-light tooltipped" data-tooltip="Create Exam/Courses" data-position="right" href="#createExam">
+            <i class="material-icons">add</i>
+          </a>
+          <ul>
+
+            {{#each courses}}
+              <li>
+               <input type="checkbox" id="{{course_name}}" /><label for="{{course_name}}">{{course_name}}</label>
+              </li>
+            {{/each}}
+
+           
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s6">
+          <input placeholder="Placeholder" id="first_name" type="text" class="validate">
+          <label for="first_name">First Name</label>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  </div>
+
+</div>
+
+<div id="createExam" class="modal">
+  <div class="modal-content">
+    <form class="createCourse">
+      <div class="row">
+        <div class="col s6 input-field">
+          <input type="text" name="category_name" id="CatName">
+          <label for="CatName">Enter category name:</label>
+
+        </div>
+        <div class="col s6 input-field">
+          <input type="submit" class="btn green" value="Create">
+          
+
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
 
 
+<script type="text/javascript">
+  $(document).ready(function(){
+     $('.tooltipped').tooltip({delay: 20});
+         $(".button-collapse").sideNav();
+         $('ul.tabs').tabs();
+             $('.modal').modal();
+  });
+</script>
 </template>

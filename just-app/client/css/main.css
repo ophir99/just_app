@@ -11,27 +11,32 @@ a{
 	text-decoration: none;
 }
 
-nav a:hover{
+.nav-wrapper ul li a:hover, .nav-wrapper ul li a:active, {
 	text-decoration: none;
-	color: #FFF;
+	color: #FF0;
 }
-nav a:active{
-	text-decoration: none;
-	color: #FFF;
-}
-.brand-logo{
+
+nav .brand-logo{
 	font-family: 'Italianno', cursive;
+	text-decoration: none;
+
+}
+nav .brand-logo a, nav .brand-logo a:hover, nav .brand-logo a:active {
+	font-family: 'Italianno', cursive;
+	text-decoration: none;
 
 }
 nav .container ul li a{
 	height: 50px;
+	color: #FFF;
 }
 nav .container ul li a i{
 	height: 50px;
 	line-height: 3.2rem;
 }
-nav ul li a{
+nav ul li a, nav ul li a:active, nav ul li a:hover,{
 	font-family: 'Quicksand', sans-serif;
+	color: #FFF;
 	
 }
 ul li a i{
@@ -41,4 +46,9 @@ ul li a i{
 
 ul.tabs li a:hover, ul.tabs li a:active, ul.tabs li a{
 	text-decoration: none;
+}
+
+#list_form ul li{
+	display: inline-block;
+	margin-right: 15px;
 }

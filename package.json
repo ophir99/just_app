@@ -1,0 +1,25 @@
+{
+  "name": "just_app",
+  "version": "1.0.0",
+  "description": "just app bro!!",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ophir99/just_app.git"
+  },
+  "keywords": [
+    "meteor",
+    "eduapp"
+  ],
+  "author": "ophir",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ophir99/just_app/issues"
+  },
+  "homepage": "https://github.com/ophir99/just_app#readme"
+}
