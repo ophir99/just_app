@@ -1,0 +1,131 @@
+<template name="dashBoard">
+	
+<div class="container-fluid">
+ <div class="row">
+ 	<div class="col s12 l12 m12">
+ 		<div class="row">
+      	  <div class="col s12 m4 l3">
+          	<div class="card-panel white">
+          	<h4 class="grey-text lighten-2">Total students</h4>
+          	<span class="grey-text lighten-2">I am a very simple card. I am good at containing small bits of information.
+          	I am convenient because I require little markup to use effectively. I am similar to what is called a panel in other frameworks.
+          	</span>
+          	</div>
+           </div>
+
+           <div class="col s12 m4 l3">
+          	<div class="card-panel white">
+          	<h4 class="grey-text lighten-2">Total Payments</h4>
+          	<span class="grey-text lighten-2">I am a very simple card. I am good at containing small bits of information.
+          	I am convenient because I require little markup to use effectively. I am similar to what is called a panel in other frameworks.
+          	</span>
+          	</div>
+           </div>
+
+           <div class="col s12 m4 l3">
+          	<div class="card-panel white">
+          	<h4 class="grey-text lighten-2">Total Views</h4>
+          	<span class="grey-text lighten-2">I am a very simple card. I am good at containing small bits of information.
+          	I am convenient because I require little markup to use effectively. I am similar to what is called a panel in other frameworks.
+          	</span>
+          	</div>
+           </div>
+
+           <div class="col s12 m4 l3">
+          	<div class="card-panel white">
+          	<h4 class="grey-text lighten-2">Total Amount</h4>
+          	<span class="grey-text lighten-2">I am a very simple card. I am good at containing small bits of information.
+          	I am convenient because I require little markup to use effectively. I am similar to what is called a panel in other frameworks.
+          	</span>
+          	</div>
+           </div>
+        </div>
+ 	</div>
+
+
+ </div>
+
+<div class="row">
+	
+	<div class="col s12 l4 m3 white ">
+	<h3>All Courses/Exams</h3>
+
+  <ul class="collapsible" data-collapsible="accordion">
+    {{#each Courses}}
+		<li>
+      	<div class="collapsible-header">{{course_name}}</div>
+      	<div class="collapsible-body">
+      		<p class="grey-text lighten-3">{{course_description}}</p>
+      		<span class="pink-text">Duration: {{course_duration}}.</span>
+      		<span class="pink-text">price: {{course_price}}.</span>
+      		<br>
+      		<span class="pink-text">Tags: {{course_tags}}.</span>
+      		<br>
+      		<span class="black-text"><a href="editcourse/{{_id}}">Edit</a></span> || <span class="black-text">
+      		<a  class="delCourse" href="{{_id}}">Delete</a></span>
+      		
+
+      	</div>
+    	</li>
+	{{/each}}    
+  </ul>
+        
+
+	</div>
+
+	<div class="col s12 l4 m3 white ">
+	<h3>All Chapters/Modules</h3>
+
+  <ul class="collapsible" data-collapsible="accordion">
+    {{#each Chapters}}
+		<li>
+      	<div class="collapsible-header">{{chapter_name}}</div>
+      	<div class="collapsible-body">
+      		<h5>Courses belong to</h5>
+      		{{#each course}}{{this}}{{/each}} <br>
+      		<span class="black-text"><a href="editchapter/{{_id}}">Edit</a></span> || <span class="black-text"><a class="delChapter" href="{{_id}}">Delete</a></span>
+      		
+
+      	</div>
+    	</li>
+	{{/each}}    
+  </ul>
+        
+
+	</div>
+
+	<div class="col s12 l4 m3 white ">
+	<h3>All Students</h3>
+
+  <ul class="collapsible" data-collapsible="accordion">
+    {{#each Chapters}}
+		<li>
+      	<div class="collapsible-header">{{chapter_name}}</div>
+      	<div class="collapsible-body">
+      		<h5>Courses belong to</h5>
+      		{{#each course}}{{this}}{{/each}} <br>
+      		<span class="black-text"><a href="editCourse/{{_id}}">Edit</a></span> <span class="black-text"><a href="del_{{_id}}">Delete</a></span>
+      		
+
+      	</div>
+    	</li>
+	{{/each}}    
+  </ul>
+        
+
+	</div>
+
+</div>		 
+</div>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		    $('.collapsible').collapsible();
+		    $('.tooltipped').tooltip({delay: 20});
+         $(".button-collapse").sideNav();
+         $('ul.tabs').tabs();
+             $('.modal').modal();
+	});
+</script>
+
+</template>

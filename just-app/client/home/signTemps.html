@@ -1,0 +1,147 @@
+<template name="signInTemp">
+	
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col s12 m12 l12">
+				<div class="col l3 m3 s0"></div>
+				<form class="col s12 m6 l6 card" id="signIn" style="padding-top: 10px;">
+      <div class="row">
+        <div class="input-field col s12 m6 l6">
+          <input  id="email" type="text" class="validate" name="email">
+          <label for="email">Email Id</label>
+        </div>
+        <div class="input-field col s12 m6 l6">
+          <input id="password" type="text" class="validate" name="password">
+          <label for="password">Password</label>
+        </div>
+      </div>
+
+      <div class="row">
+      	
+      	<div class="col l3 m3 s0 center">
+      		<input type="submit" name="" class="btn purple darken-1" value="sign in">
+      	</div>
+      			
+      </div>
+      </form>
+      <div class="col l3 m3 s0"></div>
+			</div>
+		</div>
+	</div>
+
+</template>
+
+
+
+<template name="signUpTemp">
+	
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col s12 m12 l12">
+				<div class="col l3 m3 s0"></div>
+				<form class="col s12 m6 l6 card" id="signUp" style="padding-top: 10px;">
+      <div class="row">
+        <div class="input-field col s12 m6 l6">
+          <input id="first_name" type="text" class="validate">
+          <label for="first_name">First Name</label>
+        </div>
+        <div class="input-field col s12 m6 l6">
+          <input id="last_name" type="text" class="validate">
+          <label for="last_name">Last Name</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12 m6 l6">
+          <input  id="email" type="text" class="validate">
+          <label for="email">Email</label>
+        </div>
+        <div class="input-field col s12 m6 l6">
+          <input id="mobile" type="text" class="validate">
+          <label for="mobile">Mobile</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col s12" id="list_form">
+          <h5 class="flow-text">Select Course</h5>
+          
+          <ul>
+
+            {{#each courses}}
+              <li>
+               <input type="checkbox" id="ec_{{_id}}" class="coursesV" value="{{course_name}}" name="coursesV"/><label for="ec_{{_id}}">{{course_name}}</label>
+              </li>
+            {{/each}}
+
+           
+          </ul>
+        </div>
+      </div>
+
+      <div class="row">
+      	
+      	<div class="col l3 m3 s0 center">
+      		<input type="submit" name="" class="btn purple darken-1" value="sign in">
+      	</div>
+      			
+      </div>
+      </form>
+      <div class="col l3 m3 s0"></div>
+			</div>
+		</div>
+	</div>
+
+
+</template>
+
+
+<template name="all">
+	<div class="container-fluid">
+		 
+				<div class="row">
+            <div class="col s12 m12 l12">
+              <h2 class="grey-text lighten-5 flow-text">/{{CourseD.course_name}}/</h2>
+            </div>
+        </div>
+
+        <div class="row">
+          <div class="col s12 m12 l12">
+
+            <div class="row">
+              {{#each videos}}
+              <div class="col s12 m4 l2">
+                  <div class="card sticky-action  hoverable white" style="box-shadow: 0;">
+                  <div class="card-content grey-text lighten-2" style="padding: 0px;"> 
+                    
+                    <iframe src="{{video_url}}" width="100%" style="border: 0"></iframe>
+                  </div>
+                  <div class="card-action activator" style="cursor: pointer;">...</div>
+                  <div class="card-reveal">
+                     <span class="card-title grey-text text-darken-4">{{name}}<i class="material-icons right red-text">close</i></span>
+      
+                      {{#each courses_belongto}}
+                <span>{{this}}</span>
+                {{/each}} //<br>
+                      {{#each chapters_belongto}}
+                <span>{{this}}</span> 
+                {{/each}}
+
+                <br>
+
+                <span class="black-text"><a href="/editVideo/{{_id}}">Edit</a></span> || <span class="black-text">
+                  <a  class="delVid" href="{{_id}}">Delete</a></span>
+                  </div>
+                  </div>
+              </div>
+              {{/each}}
+            </div>
+            
+
+          
+            
+              
+              
+          
+        </div>
+	</div></div>
+</template>

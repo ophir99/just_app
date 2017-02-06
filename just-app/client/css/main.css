@@ -2,11 +2,39 @@ nav{
 	height: 50px;
 	line-height: 3.3rem;
 
-background: #f857a6; /* fallback for old browsers */
-background: -webkit-linear-gradient(to left, #f857a6 , #ff5858); /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to left, #f857a6 , #ff5858); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
 
+    font-family: 'Share Tech Mono', monospace;
+    	background: #DA22FF; /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #DA22FF , #9733EE); /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #DA22FF , #9733EE); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        
+
+}
+.simpleTabs{
+	font-family: 'Share Tech Mono', monospace;
+	font-size: 1.3rem;
+}
+ul.simpleTabs li a{
+	color: #000;
+	text-decoration: none;	
+}
+#header{
+	background: #DA22FF; /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #DA22FF , #9733EE); /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #DA22FF , #9733EE); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        
+
+}
+#title{
+    font-family: 'Rochester', cursive;
+    margin-bottom: 15px;
+    padding-bottom: 30px;
+
+}
+#title a, #title a:active, #title a:hover{
+	color: #FFF;
+	text-decoration: none;
+}
 a{
 	text-decoration: none;
 }
@@ -51,4 +79,23 @@ ul.tabs li a:hover, ul.tabs li a:active, ul.tabs li a{
 #list_form ul li{
 	display: inline-block;
 	margin-right: 15px;
+}
+
+
+
+body{
+	background: #fcfcfc;
+}
+ul.switching{
+	width: auto;
+	height: 30px;
+	overflow-x: scroll;
+	overflow-y: hidden;
+    white-space: nowrap;
+}
+ul.simpleTabs li{
+	width: 200px;
+	display: inline-block !important;
+	float: left !important;
+	font-size: 1em;
 }

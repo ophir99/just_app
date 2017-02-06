@@ -1,0 +1,64 @@
+<template name="EditVideo">
+	
+	<div class="container-fluid">
+		
+		<h4>Edit {{video._id}}Video</h4>
+	<form class="col s12 " id="editVideo">
+	<input type="hidden" name="vid" value="{{video._id}}">
+      <div class="row">
+        <div class="col s12" id="list_form">
+          <h5 class="flow-text">Select Exam/Category</h5>
+          
+          <ul>
+
+            {{#each courses}}
+              <li>
+               <input type="checkbox" id="ec_{{_id}}" class="coursesV" value="{{course_name}}" name="coursesV"/><label for="ec_{{_id}}">{{course_name}}</label>
+              </li>
+            {{/each}}
+
+           
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12" id="list_form">
+          <h5 class="flow-text">Select Chapter/Module</h5>
+          
+          <ul>
+
+            {{#each chapter}}
+              <li>
+               <input  type="checkbox" id="ech_{{chapter_name}}_{{_id}}" value="{{chapter_name}}" class="chaptersV" /><label for="ech_{{chapter_name}}_{{_id}}">{{chapter_name}}/{{course}}</label>
+              </li>
+            {{/each}}
+
+           
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s6">
+          <input id="video_name" type="text" class="validate" name="video_name" value="{{video.name}}">
+          <label for="video_name" style="transform: translateY(-140%);">Video Name</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="video_url" type="text" class="validate" name="video_url" value="{{video.video_url}}">
+          <label for="video_url" style="transform: translateY(-140%);">Video URL</label>
+        </div>
+      </div>
+       <div class="row">
+        <div class="input-field col s6">
+          <input type="submit"  class="btn green">
+          
+        </div>
+        
+      </div>
+    </form>
+
+
+	</div>				
+
+
+
+</template>

@@ -1,35 +1,104 @@
 <template name="nav_temp">
 	
-	<nav>
-    	<div class="container">
-    		
-    		<div class="nav-wrapper">
-      <a href="/" class="brand-logo">Chakrapani Sir</a>
-      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-      <ul class="right hide-on-med-and-down">
-        <li><a href="sass.html">Sass</a></li>
-        <li><a href="badges.html">Components</a></li>
-        <li><a href="collapsible.html">Javascript</a></li>
-        <li><a href="mobile.html">Mobile</a></li>
-      </ul>
-      <ul class="side-nav" id="mobile-demo">
-        <li><a href="sass.html">Sass</a></li>
-        <li><a href="badges.html">Components</a></li>
-        <li><a href="collapsible.html">Javascript</a></li>
-        <li><a href="mobile.html">Mobile</a></li>
-      </ul>
-    </div>
-
-    	</div>
-  	</nav>
-          
-
+	{{> header}}
 
 </template>
 
 
 
 <template name="footer_temp">
-	Simple footer
+	 <footer class="page-footer grey darken-1">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">Footer Content</h5>
+                <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Links</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2014 Copyright Text
+            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            </div>
+          </div>
+        </footer>
+
+</template>
+
+
+<template name="header">
+  
+<div id="header">
+  
+  <nav class="z-depth-0 transparent">
+      <div class="container">
+        
+        <div class="nav-wrapper z-depth-0">
+      <a href="/" class="brand-logo"></a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse show-on-large" ><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        
+        <li><a href="/user/signIn">Sign In</a></li>
+        <li><a href="/user/signUp">Sign Up</a></li>
+        
+      </ul>
+      <ul class="side-nav" id="mobile-demo">
+        
+        <li><a href="user/signIn">Sign In</a></li>
+        <li><a href="user/signUp">Sign Up</a></li>
+      </ul>
+    </div>
+
+      </div>
+    </nav>
+
+    
+      <div class="row">
+        <div class="col s12 l12 m12">
+          <h1 class="center white-text" id="title">
+                <a href="/">Chakrapani Sir</a>
+          </h1>
+        </div>
+      </div>
+    
+          
+
+
+</div>
+<div class="container">
+    
+    <div class="row" style="margin-top: -25px;">          
+          <div class="col s12 m12 l12">
+
+            <ul class="simpleTabs" style="margin-top: 2px; ">
+                  <li class=" col s3 m2 l2">
+                    <a href="/courses/All" class="active black-text">All</a>
+                  </li>
+                  {{#each courses}}
+                  <li class=" col s3 m2 l2">
+                  <a class="black-text" href="/courseView/{{course_name}}/{{_id}}">{{course_name}}</a>
+                  </li>
+                  
+                  {{/each}}
+
+
+                  
+                </ul>
+            </div>
+    </div>
+
+  </div>
+
+
 
 </template>

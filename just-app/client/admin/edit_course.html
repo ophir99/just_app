@@ -1,0 +1,48 @@
+<template name="EditCourse">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col s12 l12 m12">
+				<h4>Edit {{course._id}}/Course/Exam</h4>
+    <form class="editCourse">
+    <input type="hidden" name="c_id" value="{{course._id}}">
+      <div class="row">
+        <div class="col s4  input-field">
+          <input type="text" name="category_name" id="CatName" value="{{course.course_name}}">
+          <label style="transform: translateY(-140%)" for="CatName">Enter category name:</label>
+
+        </div>
+        <div class="col s4 input-field">
+          <input type="number" name="duration" id="duration" value="{{course.course_duration}}">
+          <label style="transform: translateY(-140%)" for="duration">Enter Duration:</label>
+        </div>
+        <div class="col s4 input-field">
+          <input type="number" name="price" id="price" value="{{course.course_price}}">
+          <label style="transform: translateY(-140%)" for="price">Enter Duration:</label>
+        </div>
+      
+        
+        <div class="row">
+          <div class="input-field col s6">
+            <textarea id="description" class="materialize-textarea" value="{{course.course_description}}"></textarea>
+            <label style="transform: translateY(-140%)" for="description">Write Course/Exam Description</label>
+          </div>
+          <div class="input-field col s6">
+            <textarea id="tags" class="materialize-textarea" value={{course.course_tags}}></textarea>
+            <label style="transform: translateY(-140%)" for="tags">Give Tags</label>
+          </div>
+        </div>
+        
+
+
+      
+      <div class="row">
+        <div class="col s6 input-field">
+          <input type="submit" class="btn green" value="submit">
+        </div>
+      </div>
+      </div>
+    </form>
+			</div>
+		</div>
+	</div>
+</template>
